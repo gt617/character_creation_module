@@ -5,6 +5,7 @@ from graphic_arts.graphic_arts.start_game_banner import run_screensaver
 
 
 def attack(char_name: str, char_class: str) -> str:
+    """Определение уровня урона."""
     if char_class == 'warrior':
         return (f'{char_name} нанёс урон противнику'
                 f'равный {5 + randint(3, 5)}')
@@ -15,6 +16,7 @@ def attack(char_name: str, char_class: str) -> str:
 
 
 def defence(char_name: str, char_class: str) -> str:
+    """Определение уровня защиты."""
     if char_class == 'warrior':
         return (f'{char_name} блокировал {10 + randint(5, 10)} урона')
     if char_class == 'mage':
@@ -23,6 +25,7 @@ def defence(char_name: str, char_class: str) -> str:
 
 
 def special(char_name: str, char_class: str) -> str:
+    """Умение персонажа."""
     if char_class == 'warrior':
         return (f'{char_name} применил специальное'
                 f'умение «Выносливость {80 + 25}»')
@@ -32,6 +35,7 @@ def special(char_name: str, char_class: str) -> str:
 
 
 def start_training(char_name: str, char_class: str) -> str:
+    """Тренировка выбранного персонажа."""
     if char_class == 'warrior':
         print(f'{char_name}, ты Воитель — отличный боец ближнего боя.')
     if char_class == 'mage':
@@ -56,6 +60,7 @@ def start_training(char_name: str, char_class: str) -> str:
 
 
 def choice_char_class():
+    """Выбор класса персонажа."""
     approve_choice = None
     char_class = None
     while approve_choice != 'y':
